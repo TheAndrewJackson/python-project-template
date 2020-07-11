@@ -1,8 +1,10 @@
 # Python Project Template Cookiecutter
-This projects goal is to kick start the process of creating a best practices python project. 
-It utilizes [cookiecutter](https://github.com/audreyr/cookiecutter) to copy the template. 
+
+This projects goal is to kick start the process of creating a best practices python project.
+It utilizes [cookiecutter](https://github.com/audreyr/cookiecutter) to copy the template.
 
 ## Features
+
 - Formatting with [black](https://github.com/psf/black)
 - Import sorting with [isort](https://github.com/timothycrosley/isort)
 - Testing with [pytest](https://docs.pytest.org/en/latest/)
@@ -11,8 +13,8 @@ It utilizes [cookiecutter](https://github.com/audreyr/cookiecutter) to copy the 
 - Linting with [flake8](http://flake8.pycqa.org/en/latest/)
 - Git hooks that run all the above with [pre-commit](https://pre-commit.com/)
 
-
 ## Quickstart
+
 Install Poetry: [instructions](https://python-poetry.org/docs/#installation)
 
 ```sh
@@ -33,8 +35,8 @@ cd <repo_name>
 git init
 
 # Configure Poetry to install the virtual env in your project directory.
-# This allows editors like pycharm and vscode to see what packages are installed. 
-poetry config virtualenvs.in_project false
+# This allows editors like pycharm and vscode to see what packages are installed. Poetry defaults to false.
+poetry config virtualenvs.in-project true
 
 # Set the target python version in the pyproject.toml file.
 # Put the dependency under the [tool.poetry.dependencies] section.
