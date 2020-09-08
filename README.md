@@ -6,6 +6,7 @@ It utilizes [cookiecutter](https://github.com/audreyr/cookiecutter) to copy the 
 
 ## TODO
 - Update pytest to use pyproject.toml
+- Add mypy configuration and link pydantic with it
 
 
 ## Features
