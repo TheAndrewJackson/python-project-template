@@ -3,6 +3,11 @@
 This projects goal is to kick start the process of creating a best practices python project.
 It utilizes [cookiecutter](https://github.com/audreyr/cookiecutter) to copy the template.
 
+
+## TODO
+- Update pytest to use pyproject.toml
+
+
 ## Features
 
 - Formatting with [black](https://github.com/psf/black)
@@ -19,8 +24,12 @@ Install Poetry: [instructions](https://python-poetry.org/docs/#installation)
 
 ```sh
 # Install pipx if cookiecutter isn't installed
-python3 -m pip install pipx
-python3 -m pipx ensurepath
+python3 -m pip install --user pipx
+# You may need to manually add the script directory to PATH
+# pip should tell you the install location
+# Restart terminal
+pipx ensurepath
+# Restart terminal again
 
 # Install cookiecutter with pipx
 pipx install cookiecutter
