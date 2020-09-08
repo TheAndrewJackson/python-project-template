@@ -8,16 +8,18 @@ version = "0.1.0"
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
-black = "^19.10b0"
+black = "^20.8b1"
 flake8 = "^3.8.3"
-isort = "^5.0.9"
+isort = "^5.5.1"
 mypy = "^0.782"
-pre-commit = "^2.6.0"
-pytest = "^5.4.3"
-pytest-cov = "^2.10.0"
+pre-commit = "^2.7.1"
+pytest = "^6.0.1"
+pytest-cov = "2.10.1"
+pydantic = "^1.6.1"
+
+[tool.black]
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
 requires = ["poetry_core>=1.0.0"]
 
-[tool.black]
