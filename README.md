@@ -4,8 +4,8 @@ This projects goal is to kick start the process of creating a best practices pyt
 It utilizes [cookiecutter](https://github.com/audreyr/cookiecutter) to copy the template.
 
 ## TODO
-
 - Add pydantic to mypy in config file
+
 
 ## Features
 
@@ -59,3 +59,9 @@ poetry install
 poetry run pre-commit install -t pre-commit
 poetry run pre-commit install -t pre-push
 ```
+
+
+## Current packages that don't support pyproject.toml
+- mypy - [Github Issue](https://github.com/python/mypy/issues/5205)
+- flake8 - [Gitlab Issue](https://gitlab.com/pycqa/flake8/-/issues/428)
+- pre-commit - No issue yet 9/9/2020
