@@ -3,10 +3,6 @@
 This projects goal is to kick start the process of creating a best practices python project.
 It utilizes [cookiecutter](https://github.com/audreyr/cookiecutter) to copy the template.
 
-## TODO
-- Add pydantic to mypy in config file
-
-
 ## Features
 
 - Formatting with [black](https://github.com/psf/black)
