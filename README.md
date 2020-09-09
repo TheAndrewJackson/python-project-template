@@ -3,11 +3,9 @@
 This projects goal is to kick start the process of creating a best practices python project.
 It utilizes [cookiecutter](https://github.com/audreyr/cookiecutter) to copy the template.
 
-
 ## TODO
-- Update pytest to use pyproject.toml
-- Add mypy configuration and link pydantic with it
 
+- Add pydantic to mypy in config file
 
 ## Features
 
