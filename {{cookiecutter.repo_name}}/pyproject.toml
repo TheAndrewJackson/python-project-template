@@ -5,6 +5,7 @@ name = "project-template"
 version = "0.1.0"
 
 [tool.poetry.dependencies]
+pydantic = "^1.6.1"
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
@@ -15,11 +16,13 @@ mypy = "^0.782"
 pre-commit = "^2.7.1"
 pytest = "^6.0.1"
 pytest-cov = "2.10.1"
-pydantic = "^1.6.1"
+
+[tool.pytest.ini_options]
+addopts = "--cov={{cookiecutter.repo_name}} tests/ --cov-fail-under=100 --cov-report html"
+testpaths = "tests/"
 
 [tool.black]
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
 requires = ["poetry_core>=1.0.0"]
-
