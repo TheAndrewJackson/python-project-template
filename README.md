@@ -3,19 +3,18 @@
 This projects goal is to kick start the process of creating a best practices python project.
 It utilizes [cookiecutter](https://github.com/audreyr/cookiecutter) to copy the template.
 
-## TODO
-
-- Add pydantic to mypy in config file
-
 ## Features
 
 - Formatting with [black](https://github.com/psf/black)
 - Import sorting with [isort](https://github.com/timothycrosley/isort)
 - Testing with [pytest](https://docs.pytest.org/en/latest/)
 - Code coverage with [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/index.html)
-- Static typing with [mypy](http://mypy-lang.org/)
+- Static type linting with [mypy](http://mypy-lang.org/)
 - Linting with [flake8](http://flake8.pycqa.org/en/latest/)
 - Git hooks that run all the above with [pre-commit](https://pre-commit.com/)
+- Runtime enforced static type checking and data validation with [pydantic](https://pydantic-docs.helpmanual.io/)
+    - This works by implementing pydantic based models.
+    - This also includes enhanced mypy linting with the pydantic-mypy plugin
 
 ## Quickstart
 
@@ -59,3 +58,9 @@ poetry install
 poetry run pre-commit install -t pre-commit
 poetry run pre-commit install -t pre-push
 ```
+
+
+## Current packages that don't support pyproject.toml
+- mypy - [Github Issue](https://github.com/python/mypy/issues/5205)
+- flake8 - [Gitlab Issue](https://gitlab.com/pycqa/flake8/-/issues/428)
+- pre-commit - No issue yet 9/9/2020
