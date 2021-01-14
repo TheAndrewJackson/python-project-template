@@ -11,6 +11,7 @@ It utilizes [cookiecutter](https://github.com/audreyr/cookiecutter) to copy the 
 - Code coverage with [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/index.html)
 - Static type linting with [mypy](http://mypy-lang.org/)
 - Linting with [flake8](http://flake8.pycqa.org/en/latest/)
+- Security Scanning with [Bandit](https://github.com/PyCQA/bandit)
 - Git hooks that run all the above with [pre-commit](https://pre-commit.com/)
 - Runtime enforced static type checking and data validation with [pydantic](https://pydantic-docs.helpmanual.io/)
     - This works by implementing pydantic based models.

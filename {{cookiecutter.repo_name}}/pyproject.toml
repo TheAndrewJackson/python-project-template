@@ -9,6 +9,7 @@ pydantic = "^1.7.3"
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
+bandit = "1.7.0"
 black = "^20.8b1"
 flake8 = "^3.8.4"
 isort = "^5.6.4"
@@ -22,12 +23,11 @@ addopts = "--cov={{cookiecutter.repo_name}} tests/ --cov-fail-under=100 --cov-re
 testpaths = "tests/"
 
 [tool.isort]
-multi_line_output=3
-include_trailing_comma=true
-force_grid_wrap=0
-use_parentheses=true
-line_length=88
-
+force_grid_wrap = 0
+include_trailing_comma = true
+line_length = 88
+multi_line_output = 3
+use_parentheses = true
 
 [tool.black]
 
