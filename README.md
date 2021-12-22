@@ -1,6 +1,6 @@
 # Python Project Template Cookiecutter
 
-This projects goal is to kick start the process of creating a best practices python project.
+This project's goal is to kick start the process of creating a best practices python project.
 It utilizes [cookiecutter](https://github.com/audreyr/cookiecutter) to copy the template.
 
 ## Features
