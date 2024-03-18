@@ -1,5 +1,4 @@
-## Current packages that don't support pyproject.toml
-- pre-commit - No issue yet 9/9/2020[project]
+[project]
 authors = [{email="Your Name <you@example.com>"}]
 description = ""
 name = "project-template"
