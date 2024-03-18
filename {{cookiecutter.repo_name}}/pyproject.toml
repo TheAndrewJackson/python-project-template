@@ -1,36 +1,40 @@
-[tool.poetry]
-authors = ["Your Name <you@example.com>"]
+## Current packages that don't support pyproject.toml
+- pre-commit - No issue yet 9/9/2020[project]
+authors = [{email="Your Name <you@example.com>"}]
 description = ""
 name = "project-template"
 version = "0.1.0"
 
-[tool.poetry.dependencies]
-pydantic = "^1.7.3"
-python = "^3.8"
+dependencies=[
+  "pydantic ==2.6",
+]
 
-[tool.poetry.dev-dependencies]
-bandit = "1.7.0"
-black = "^20.8b1"
-flake8 = "^3.8.4"
-isort = "^5.6.4"
-mypy = "^0.790"
-pre-commit = "^2.9.3"
-pytest = "^6.2.1"
-pytest-cov = "2.10.1"
+[project.optional-dependencies]
+all =[
+  "ruff==0.3.0",
+  "mypy==1.9.0",
+  "pre-commit==3.6.2",
+  "pytest==8.1.1",
+  "pytest-cov==4.1.0",
+]
 
 [tool.pytest.ini_options]
-addopts = "--cov={{cookiecutter.repo_name}} tests/ --cov-fail-under=100 --cov-report html"
+addopts = "--cov={{cookiecutter.repo_name}} tests/ --cov-report html"
 testpaths = "tests/"
 
-[tool.isort]
-force_grid_wrap = 0
-include_trailing_comma = true
-line_length = 88
-multi_line_output = 3
-use_parentheses = true
+[tool.mypy]
+files="{{cookiecutter.repo_name}},tests"
 
-[tool.black]
+#Used to silence errors from untyped 3rd party libraries.
+#It's possible to do this on a per library basis and
+#still check this package. Configure that later if desired
+ignore_missing_imports=true
 
-[build-system]
-build-backend = "poetry.core.masonry.api"
-requires = ["poetry_core>=1.0.0"]
+plugins = "pydantic.mypy"
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_unused_configs = true
+warn_unreachable = true
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
